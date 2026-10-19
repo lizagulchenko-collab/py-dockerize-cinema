@@ -14,6 +14,7 @@ class Command(BaseCommand):
         while True:
             try:
                 db_conn.ensure_connection()
+                break
             except OperationalError:
                 self.stdout.write(
                     "Database unavailable, waiting 1 second..."
